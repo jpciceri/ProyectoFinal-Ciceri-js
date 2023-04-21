@@ -47,6 +47,10 @@ function eliminarProducto(id) {
     renderBotonCarrito();
 }
 
+function cargarProductosLS() {
+    return JSON.parse(localStorage.getItem("productos")) || [];
+}
+
 function buscarProducto(id) { 
     const productos = cargarProductosLS();
 
