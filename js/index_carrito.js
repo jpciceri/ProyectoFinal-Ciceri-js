@@ -26,7 +26,7 @@ function renderProductosCarrito() {
         </tr>`;
         salida += `</table>`;
     } else {
-        salida = carritoVacio()
+        salida = carritoVacio();
 
     }
 

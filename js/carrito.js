@@ -22,16 +22,16 @@ function estaEnElCarrito(id) {
 
 function agregarAlCarrito(id) {
     const carrito = cargarProductosCarrito();
-    debugger;
+    
     if (estaEnElCarrito(id)) {
         let pos = carrito.findIndex(item => item.id === id);
         carrito[pos].cantidad += 1;
-         console.log(carrito[pos].cantidad)
+
     } else {
         const producto = buscarProducto(id);
         producto.cantidad = 1;
         carrito.push(producto);
-         console.log(producto.cantidad)
+
 
     }
 
