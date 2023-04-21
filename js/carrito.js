@@ -26,10 +26,13 @@ function agregarAlCarrito(id) {
     if (estaEnElCarrito(id)) {
         let pos = carrito.findIndex(item => item.id === id);
         carrito[pos].cantidad += 1;
+        console.log(carrito.cantidad)
     } else {
         const producto = buscarProducto(id);
         producto.cantidad = 1;
         carrito.push(producto);
+        console.log(carrito.cantidad)
+
     }
 
     guardarProductosCarrito(carrito);
