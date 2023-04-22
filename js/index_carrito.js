@@ -1,5 +1,6 @@
 function renderProductosCarrito() {
-    const productos = cargarProductosCarrito(); //? productos
+    const productos = cargarCarritoLS(); //? productos
+
     let salida = "";
 
     if (totalProductosCarrito() > 0) {

@@ -1,5 +1,8 @@
 
+let productos = [];
+
 function init(){
+    inicializarStorage();
     renderProductos();
     renderBotonCarrito();
     
@@ -16,7 +19,7 @@ function init(){
 }
 
 async function renderProductos(filter) {
-    let productos = await getProductos();
+    productos = await getProductos();
     
     if(filter != null && filter.length > 0){
         productos = productos.filter(item => item.nombre.toLowerCase().indexOf(filter) !== -1);
